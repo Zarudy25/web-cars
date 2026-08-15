@@ -1,0 +1,128 @@
+:root {
+  color: #1f2937;
+  background: #eef2f7;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem clamp(1rem, 5vw, 4rem);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgb(15 23 42 / 8%);
+}
+
+.brand {
+  color: #2563eb;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.site-nav {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.site-nav a {
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  color: #475569;
+  font-weight: 700;
+}
+
+.site-nav a.active {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.page-content {
+  display: grid;
+  min-height: calc(100vh - 72px);
+  place-items: center;
+  padding: 2rem;
+}
+
+.hero-card,
+.auth-card {
+  width: min(100%, 720px);
+  border-radius: 28px;
+  padding: clamp(2rem, 5vw, 4rem);
+  background: #ffffff;
+  box-shadow: 0 25px 80px rgb(15 23 42 / 12%);
+}
+
+.hero-card h1,
+.auth-card h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: clamp(2rem, 6vw, 4rem);
+  line-height: 1;
+}
+
+.hero-card p:not(.eyebrow) {
+  max-width: 58ch;
+  color: #475569;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.login-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.login-form label {
+  color: #334155;
+  font-weight: 700;
+}
+
+.login-form input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 14px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+}
+
+.login-form button {
+  margin-top: 0.75rem;
+  border: 0;
+  border-radius: 14px;
+  padding: 1rem;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+}
