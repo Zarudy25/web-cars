@@ -23,6 +23,8 @@ a {
   min-height: 100vh;
 }
 
+/* Header */
+
 .site-header {
   display: flex;
   align-items: center;
@@ -56,12 +58,26 @@ a {
   color: #ffffff;
 }
 
+/* Pages */
+
 .page-content {
-  display: grid;
   min-height: calc(100vh - 72px);
-  place-items: center;
   padding: 2rem;
 }
+
+.home-page {
+  width: min(100%, 1180px);
+  min-height: calc(100vh - 72px);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-page__intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
 
 .hero-card,
 .auth-card {
@@ -72,6 +88,9 @@ a {
   box-shadow: 0 25px 80px rgb(15 23 42 / 12%);
 }
 
+/* Titles */
+
+.home-page__intro h1,
 .hero-card h1,
 .auth-card h1 {
   margin: 0;
@@ -80,7 +99,9 @@ a {
   line-height: 1;
 }
 
-.hero-card p:not(.eyebrow) {
+.home-page__intro p:not(.eyebrow),
+.hero-card p:not(.eyebrow),
+.auth-card p:not(.eyebrow) {
   max-width: 58ch;
   color: #475569;
   font-size: 1.1rem;
@@ -95,6 +116,8 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+
+/* Login */
 
 .login-form {
   display: grid;
@@ -124,5 +147,89 @@ a {
   color: #ffffff;
   cursor: pointer;
   font: inherit;
+  font-weight: 800;
+}
+
+/* Cars */
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.car-card {
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgb(15 23 42 / 10%);
+}
+
+.car-card__image-wrap {
+  position: relative;
+  display: grid;
+  min-height: 190px;
+  place-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+}
+
+.car-card__image-placeholder {
+  color: #1d4ed8;
+  font-weight: 800;
+}
+
+.car-card__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.car-card__body {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.25rem;
+}
+
+.car-card__body h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 1.25rem;
+}
+
+.car-card__price {
+  margin: 0.35rem 0 0;
+  color: #2563eb;
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.car-card__details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.car-card__details div {
+  border-radius: 14px;
+  padding: 0.75rem;
+  background: #f8fafc;
+}
+
+.car-card__details dt {
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.car-card__details dd {
+  margin: 0.25rem 0 0;
+  color: #0f172a;
+  font-size: 0.88rem;
   font-weight: 800;
 }
