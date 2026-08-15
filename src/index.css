@@ -23,6 +23,8 @@ a {
   min-height: 100vh;
 }
 
+/* Header */
+
 .site-header {
   display: flex;
   align-items: center;
@@ -56,12 +58,28 @@ a {
   color: #ffffff;
 }
 
+/* Pages */
+
 .page-content {
   min-height: calc(100vh - 72px);
   padding: 2rem;
 }
 
-.home-page,
+.home-page {
+  width: min(100%, 1180px);
+  min-height: calc(100vh - 72px);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.home-page__intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+/* Cards */
+
+.hero-card,
 .auth-card {
   width: min(100%, 720px);
   border-radius: 28px;
@@ -70,7 +88,10 @@ a {
   box-shadow: 0 25px 80px rgb(15 23 42 / 12%);
 }
 
+/* Titles */
+
 .home-page__intro h1,
+.hero-card h1,
 .auth-card h1 {
   margin: 0;
   color: #0f172a;
@@ -78,7 +99,9 @@ a {
   line-height: 1;
 }
 
-.home-page__intro p:not(.eyebrow) {
+.home-page__intro p:not(.eyebrow),
+.hero-card p:not(.eyebrow),
+.auth-card p:not(.eyebrow) {
   max-width: 58ch;
   color: #475569;
   font-size: 1.1rem;
@@ -93,6 +116,8 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
+
+/* Login */
 
 .login-form {
   display: grid;
@@ -125,16 +150,7 @@ a {
   font-weight: 800;
 }
 
-
-.home-page {
-  width: min(100%, 1180px);
-  margin: 0 auto;
-}
-
-.home-page__intro {
-  max-width: 760px;
-  margin-bottom: 2rem;
-}
+/* Cars */
 
 .cars-grid {
   display: grid;

@@ -89,16 +89,22 @@ function HomePage() {
     <section className="home-page">
       <div className="home-page__intro">
         <p className="eyebrow">Homepage</p>
+
         <h1>Encuentra tu próximo coche con Web Cars</h1>
+
         <p>
           Explora ofertas, compara modelos y guarda tus vehículos favoritos.
-          Puedes subir tus imágenes en <strong>public/images/cars</strong> con
-          nombres como <strong>car-01.jpg</strong>, <strong>car-02.jpg</strong> y
-          así sucesivamente.
+          Puedes subir tus imágenes en{' '}
+          <strong>public/images/cars</strong> con nombres como{' '}
+          <strong>car-01.jpg</strong>, <strong>car-02.jpg</strong> y así
+          sucesivamente.
         </p>
       </div>
 
-      <div className="cars-grid" aria-label="Listado de carritos disponibles">
+      <div
+        className="cars-grid"
+        aria-label="Listado de coches disponibles"
+      >
         {cars.map((car) => (
           <CarCard key={car.name} {...car} />
         ))}
